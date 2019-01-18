@@ -3,16 +3,16 @@ package codingdojo;
 public enum WordDirection {
     HORIZONTAL {
         @Override
-        public SquareKT move(SquareKT previous) {
+        public Square move(Square previous) {
             return previous.right();
         }
     },
     VERTICAL {
         @Override
-        public SquareKT move(SquareKT previous) {
+        public Square move(Square previous) {
             return previous.down();
         }
     };
 
-    public abstract SquareKT move(SquareKT previous);
+    public abstract Square move(Square previous);
 }

@@ -5,11 +5,11 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public class ModifiersBuilder {
-    private final SquareKT firstLetterSquare;
+    private final Square firstLetterSquare;
     private final WordDirection direction;
     private final int wordLength;
 
-    public ModifiersBuilder(SquareKT firstLetterSquare, WordDirection direction, int wordLength) {
+    public ModifiersBuilder(Square firstLetterSquare, WordDirection direction, int wordLength) {
         this.firstLetterSquare = firstLetterSquare;
         this.direction = direction;
         this.wordLength = wordLength;
@@ -17,12 +17,12 @@ public class ModifiersBuilder {
 
 
     public List<String> getModifiers() {
-        List<SquareKT> collect = IntStream
+        List<Square> collect = IntStream
                 .range(0, wordLength)
                 .mapToObj(i -> firstLetterSquare.getSquareForLetterIndex(i, direction))
                 .collect(Collectors.toList());
 
-        return collect.stream().map(SquareKT::toCoordinates)
+        return collect.stream().map(Square::toCoordinates)
                 .map(s -> ScrabbleData.PremiumSquares.getOrDefault(s, ScrabbleData.BLANK))
                 .collect(Collectors.toList());
     }

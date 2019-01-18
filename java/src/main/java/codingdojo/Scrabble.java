@@ -6,7 +6,7 @@ import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class Scrabble {
-    public Integer calculateScore(SquareKT firstLetterSquare, WordDirection direction, String word) {
+    public Integer calculateScore(Square firstLetterSquare, WordDirection direction, String word) {
         ModifiersBuilder builder = new ModifiersBuilder(firstLetterSquare, direction, word.length());
         List<String> modifiers = builder.getModifiers();
         return calculateBaseScore(word, modifiers);
