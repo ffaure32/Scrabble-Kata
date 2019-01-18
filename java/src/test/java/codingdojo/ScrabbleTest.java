@@ -8,11 +8,9 @@ import java.util.List;
 import static codingdojo.ScrabbleData.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class ScrabbleTest
-{
+public class ScrabbleTest {
     @Test
-    public void calculateBaseScore()
-    {
+    public void calculateBaseScore() {
         String word = "Cabbage";
 
         Scrabble scrabble = new Scrabble();
@@ -22,8 +20,7 @@ public class ScrabbleTest
     }
 
     @Test
-    public void calculateFirstSamplePart2()
-    {
+    public void calculateFirstSamplePart2() {
         String word = "Cabbage";
         List<String> modifiers = Arrays.asList(BLANK, TRIPLE_LETTER, BLANK, BLANK, BLANK, DOUBLE_WORD, BLANK);
         Scrabble scrabble = new Scrabble();
@@ -34,8 +31,7 @@ public class ScrabbleTest
     }
 
     @Test
-    public void calculate2ndSamplePart2()
-    {
+    public void calculate2ndSamplePart2() {
         String word = "Cabbage";
         List<String> modifiers = Arrays.asList(DOUBLE_LETTER, BLANK, BLANK, BLANK, TRIPLE_WORD, BLANK, BLANK);
         Scrabble scrabble = new Scrabble();
@@ -46,8 +42,7 @@ public class ScrabbleTest
     }
 
     @Test
-    public void calculateFirstSamplePart2IntegrationTest()
-    {
+    public void calculateFirstSamplePart2IntegrationTest() {
         String word = "Cabbage";
         Scrabble scrabble = new Scrabble();
         Square firstLetterSquare = new Square('I', 2);
@@ -60,8 +55,7 @@ public class ScrabbleTest
     }
 
     @Test
-    public void calculate2ndSamplePart2IntegrationTest()
-    {
+    public void calculate2ndSamplePart2IntegrationTest() {
         String word = "Cabbage";
         Scrabble scrabble = new Scrabble();
         Square firstLetterSquare = new Square('A', 4);

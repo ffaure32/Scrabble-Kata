@@ -17,13 +17,14 @@ public class ModifiersBuilder {
 
 
     public List<String> getModifiers() {
-        final Square[] currentSquare = {firstLetterSquare};
-        return IntStream.range(0, wordLength).mapToObj(i -> {
-            final Square toReturn = currentSquare[0];
-            currentSquare[0] = direction.move(currentSquare[0]);
-            return toReturn;
-        }).map(s -> s.toModifier())
+        List<Square> collect = IntStream
+                .range(0, wordLength)
+                .mapToObj(i -> firstLetterSquare.getSquareForLetterIndex(i, direction))
+                .collect(Collectors.toList());
+
+        return collect.stream().map(Square::toCoordinates)
                 .map(s -> ScrabbleData.PremiumSquares.getOrDefault(s, ScrabbleData.BLANK))
-        .collect(Collectors.toList());
+                .collect(Collectors.toList());
     }
+
 }

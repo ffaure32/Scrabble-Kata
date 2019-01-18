@@ -9,15 +9,24 @@ public class Square {
         this.number = number;
     }
 
-    public Square left() {
-        return new Square((char)(letter+1), number);
+    public Square right() {
+        return new Square((char) (letter + 1), number);
     }
 
     public Square down() {
-        return new Square(letter, number+1);
+        return new Square(letter, number + 1);
     }
 
-    public String toModifier() {
-        return new StringBuilder().append(letter).append(',').append(number).toString();
+    public Square move(WordDirection direction) {
+        return direction.move(this);
+    }
+
+    public String toCoordinates() {
+        return String.valueOf(letter) + ',' + number;
+    }
+
+    Square getSquareForLetterIndex(int nbMoves, WordDirection direction) {
+        if (nbMoves == 0) return this;
+        return move(direction).getSquareForLetterIndex(nbMoves - 1, direction);
     }
 }
