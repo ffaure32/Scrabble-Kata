@@ -39,101 +39,108 @@ public class ScrabbleData {
         }
     };
 
+    public static final String BLANK = "    ";
+    public static final String TRIPLE_WORD = "3xWS";
+    public static final String DOUBLE_LETTER = "2xLS";
+    public static final String DOUBLE_WORD = "2xWS";
+    public static final String TRIPLE_LETTER = "3xLS";
+    public static final String STAR = "star";
+
     public static List<List<String>> Board = Arrays.asList(
-            Arrays.asList("3xWS", "    ", "    ", "2xLS", "    ", "    ", "    ", "3xWS", "    ", "    ", "    ", "2xLS", "    ", "    ", "3xWS"),
-            Arrays.asList("    ", "2xWS", "    ", "    ", "    ", "3xLS", "    ", "    ", "    ", "3xLS", "    ", "    ", "    ", "2xWS", "    "),
-            Arrays.asList("    ", "    ", "2xWS", "    ", "    ", "    ", "2xLS", "    ", "2xLS", "    ", "    ", "    ", "2xWS", "    ", "    "),
-            Arrays.asList("    ", "    ", "    ", "2xWS", "    ", "    ", "    ", "2xLS", "    ", "    ", "    ", "2xWS", "    ", "    ", "    "),
-            Arrays.asList("2xLS", "    ", "    ", "    ", "2xWS", "    ", "    ", "    ", "    ", "    ", "2xWS", "    ", "    ", "    ", "2xLS"),
-            Arrays.asList("    ", "3xLS", "    ", "    ", "    ", "3xLS", "    ", "    ", "    ", "3xLS", "    ", "    ", "    ", "3xLS", "    "),
-            Arrays.asList("    ", "    ", "2xLS", "    ", "    ", "    ", "2xLS", "    ", "2xLS", "    ", "    ", "    ", "2xLS", "    ", "    "),
-            Arrays.asList("3xWS", "    ", "    ", "2xLS", "    ", "    ", "    ", "star", "    ", "    ", "    ", "2xLS", "    ", "    ", "3xWS"),
-            Arrays.asList("    ", "    ", "2xLS", "    ", "    ", "    ", "2xLS", "    ", "2xLS", "    ", "    ", "    ", "2xLS", "    ", "    "),
-            Arrays.asList("    ", "3xLS", "    ", "    ", "    ", "3xLS", "    ", "    ", "    ", "3xLS", "    ", "    ", "    ", "3xLS", "    "),
-            Arrays.asList("2xLS", "    ", "    ", "    ", "2xWS", "    ", "    ", "    ", "    ", "    ", "2xWS", "    ", "    ", "    ", "2xLS"),
-            Arrays.asList("    ", "    ", "    ", "2xWS", "    ", "    ", "    ", "2xLS", "    ", "    ", "    ", "2xWS", "    ", "    ", "    "),
-            Arrays.asList("    ", "    ", "2xWS", "    ", "    ", "    ", "2xLS", "    ", "2xLS", "    ", "    ", "    ", "2xWS", "    ", "    "),
-            Arrays.asList("    ", "2xWS", "    ", "    ", "    ", "3xLS", "    ", "    ", "    ", "3xLS", "    ", "    ", "    ", "2xWS", "    "),
-            Arrays.asList("3xWS", "    ", "    ", "2xLS", "    ", "    ", "    ", "3xWS", "    ", "    ", "    ", "2xLS", "    ", "    ", "3xWS")
+            Arrays.asList(TRIPLE_WORD, BLANK, BLANK, DOUBLE_LETTER, BLANK, BLANK, BLANK, TRIPLE_WORD, BLANK, BLANK, BLANK, DOUBLE_LETTER, BLANK, BLANK, TRIPLE_WORD),
+            Arrays.asList(BLANK, DOUBLE_WORD, BLANK, BLANK, BLANK, TRIPLE_LETTER, BLANK, BLANK, BLANK, TRIPLE_LETTER, BLANK, BLANK, BLANK, DOUBLE_WORD, BLANK),
+            Arrays.asList(BLANK, BLANK, DOUBLE_WORD, BLANK, BLANK, BLANK, DOUBLE_LETTER, BLANK, DOUBLE_LETTER, BLANK, BLANK, BLANK, DOUBLE_WORD, BLANK, BLANK),
+            Arrays.asList(BLANK, BLANK, BLANK, DOUBLE_WORD, BLANK, BLANK, BLANK, DOUBLE_LETTER, BLANK, BLANK, BLANK, DOUBLE_WORD, BLANK, BLANK, BLANK),
+            Arrays.asList(DOUBLE_LETTER, BLANK, BLANK, BLANK, DOUBLE_WORD, BLANK, BLANK, BLANK, BLANK, BLANK, DOUBLE_WORD, BLANK, BLANK, BLANK, DOUBLE_LETTER),
+            Arrays.asList(BLANK, TRIPLE_LETTER, BLANK, BLANK, BLANK, TRIPLE_LETTER, BLANK, BLANK, BLANK, TRIPLE_LETTER, BLANK, BLANK, BLANK, TRIPLE_LETTER, BLANK),
+            Arrays.asList(BLANK, BLANK, DOUBLE_LETTER, BLANK, BLANK, BLANK, DOUBLE_LETTER, BLANK, DOUBLE_LETTER, BLANK, BLANK, BLANK, DOUBLE_LETTER, BLANK, BLANK),
+            Arrays.asList(TRIPLE_WORD, BLANK, BLANK, DOUBLE_LETTER, BLANK, BLANK, BLANK, STAR, BLANK, BLANK, BLANK, DOUBLE_LETTER, BLANK, BLANK, TRIPLE_WORD),
+            Arrays.asList(BLANK, BLANK, DOUBLE_LETTER, BLANK, BLANK, BLANK, DOUBLE_LETTER, BLANK, DOUBLE_LETTER, BLANK, BLANK, BLANK, DOUBLE_LETTER, BLANK, BLANK),
+            Arrays.asList(BLANK, TRIPLE_LETTER, BLANK, BLANK, BLANK, TRIPLE_LETTER, BLANK, BLANK, BLANK, TRIPLE_LETTER, BLANK, BLANK, BLANK, TRIPLE_LETTER, BLANK),
+            Arrays.asList(DOUBLE_LETTER, BLANK, BLANK, BLANK, DOUBLE_WORD, BLANK, BLANK, BLANK, BLANK, BLANK, DOUBLE_WORD, BLANK, BLANK, BLANK, DOUBLE_LETTER),
+            Arrays.asList(BLANK, BLANK, BLANK, DOUBLE_WORD, BLANK, BLANK, BLANK, DOUBLE_LETTER, BLANK, BLANK, BLANK, DOUBLE_WORD, BLANK, BLANK, BLANK),
+            Arrays.asList(BLANK, BLANK, DOUBLE_WORD, BLANK, BLANK, BLANK, DOUBLE_LETTER, BLANK, DOUBLE_LETTER, BLANK, BLANK, BLANK, DOUBLE_WORD, BLANK, BLANK),
+            Arrays.asList(BLANK, DOUBLE_WORD, BLANK, BLANK, BLANK, TRIPLE_LETTER, BLANK, BLANK, BLANK, TRIPLE_LETTER, BLANK, BLANK, BLANK, DOUBLE_WORD, BLANK),
+            Arrays.asList(TRIPLE_WORD, BLANK, BLANK, DOUBLE_LETTER, BLANK, BLANK, BLANK, TRIPLE_WORD, BLANK, BLANK, BLANK, DOUBLE_LETTER, BLANK, BLANK, TRIPLE_WORD)
     );
 
     public static Map<String, String> PremiumSquares = new HashMap<String, String>() {
         {
-            put("A,1", "3xWS");
-            put("D,1", "2xLS");
-            put("H,1", "3xWS");
-            put("L,1", "2xLS");
-            put("O,1", "3xWS");
+            put("A,1", TRIPLE_WORD);
+            put("D,1", DOUBLE_LETTER);
+            put("H,1", TRIPLE_WORD);
+            put("L,1", DOUBLE_LETTER);
+            put("O,1", TRIPLE_WORD);
 
-            put("B,2", "2xWS");
-            put("F,2", "3xLS");
-            put("J,2", "3xLS");
-            put("N,2", "2xWS");
+            put("B,2", DOUBLE_WORD);
+            put("F,2", TRIPLE_LETTER);
+            put("J,2", TRIPLE_LETTER);
+            put("N,2", DOUBLE_WORD);
 
-            put("C,3", "2xWS");
-            put("G,3", "2xLS");
-            put("I,3", "2xLS");
-            put("M,3", "2xWS");
+            put("C,3", DOUBLE_WORD);
+            put("G,3", DOUBLE_LETTER);
+            put("I,3", DOUBLE_LETTER);
+            put("M,3", DOUBLE_WORD);
 
-            put("A,4", "2xLS");
-            put("D,4", "2xWS");
-            put("H,4", "2xLS");
-            put("L,4", "2xWS");
-            put("O,4", "2xLS");
+            put("A,4", DOUBLE_LETTER);
+            put("D,4", DOUBLE_WORD);
+            put("H,4", DOUBLE_LETTER);
+            put("L,4", DOUBLE_WORD);
+            put("O,4", DOUBLE_LETTER);
 
-            put("E,5", "2xWS");
-            put("K,5", "2xWS");
+            put("E,5", DOUBLE_WORD);
+            put("K,5", DOUBLE_WORD);
 
-            put("B,6", "3xLS");
-            put("F,6", "3xLS");
-            put("J,6", "3xLS");
-            put("N,6", "3xLS");
+            put("B,6", TRIPLE_LETTER);
+            put("F,6", TRIPLE_LETTER);
+            put("J,6", TRIPLE_LETTER);
+            put("N,6", TRIPLE_LETTER);
 
-            put("C,7", "2xLS");
-            put("G,7", "2xLS");
-            put("I,7", "2xLS");
-            put("M,7", "2xLS");
+            put("C,7", DOUBLE_LETTER);
+            put("G,7", DOUBLE_LETTER);
+            put("I,7", DOUBLE_LETTER);
+            put("M,7", DOUBLE_LETTER);
 
-            put("A,8", "3xWS");
-            put("D,8", "2xLS");
+            put("A,8", TRIPLE_WORD);
+            put("D,8", DOUBLE_LETTER);
             put("H,8", "star");
-            put("L,8", "2xLS");
-            put("O,8", "3xWS");
+            put("L,8", DOUBLE_LETTER);
+            put("O,8", TRIPLE_WORD);
 
-            put("C,9", "2xLS");
-            put("G,9", "2xLS");
-            put("I,9", "2xLS");
-            put("M,9", "2xLS");
+            put("C,9", DOUBLE_LETTER);
+            put("G,9", DOUBLE_LETTER);
+            put("I,9", DOUBLE_LETTER);
+            put("M,9", DOUBLE_LETTER);
 
-            put("B,10", "3xLS");
-            put("F,10", "3xLS");
-            put("J,10", "3xLS");
-            put("N,10", "3xLS");
+            put("B,10", TRIPLE_LETTER);
+            put("F,10", TRIPLE_LETTER);
+            put("J,10", TRIPLE_LETTER);
+            put("N,10", TRIPLE_LETTER);
 
-            put("E,11", "2xWS");
-            put("K,11", "2xWS");
+            put("E,11", DOUBLE_WORD);
+            put("K,11", DOUBLE_WORD);
 
-            put("A,12", "2xLS");
-            put("D,12", "2xWS");
-            put("H,12", "2xLS");
-            put("L,12", "2xWS");
-            put("O,12", "2xLS");
+            put("A,12", DOUBLE_LETTER);
+            put("D,12", DOUBLE_WORD);
+            put("H,12", DOUBLE_LETTER);
+            put("L,12", DOUBLE_WORD);
+            put("O,12", DOUBLE_LETTER);
 
-            put("C,13", "2xWS");
-            put("G,13", "2xLS");
-            put("I,13", "2xLS");
-            put("M,13", "2xWS");
+            put("C,13", DOUBLE_WORD);
+            put("G,13", DOUBLE_LETTER);
+            put("I,13", DOUBLE_LETTER);
+            put("M,13", DOUBLE_WORD);
 
-            put("B,14", "2xWS");
-            put("F,14", "3xLS");
-            put("J,14", "3xLS");
-            put("N,14", "2xWS");
+            put("B,14", DOUBLE_WORD);
+            put("F,14", TRIPLE_LETTER);
+            put("J,14", TRIPLE_LETTER);
+            put("N,14", DOUBLE_WORD);
 
-            put("A,15", "3xWS");
-            put("D,15", "2xLS");
-            put("H,15", "3xWS");
-            put("L,15", "2xLS");
-            put("O,15", "3xWS");
+            put("A,15", TRIPLE_WORD);
+            put("D,15", DOUBLE_LETTER);
+            put("H,15", TRIPLE_WORD);
+            put("L,15", DOUBLE_LETTER);
+            put("O,15", TRIPLE_WORD);
         }
     };
 
