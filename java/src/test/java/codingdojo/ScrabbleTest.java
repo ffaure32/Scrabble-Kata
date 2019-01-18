@@ -45,7 +45,7 @@ public class ScrabbleTest {
     public void calculateFirstSamplePart2IntegrationTest() {
         String word = "Cabbage";
         Scrabble scrabble = new Scrabble();
-        Square firstLetterSquare = new Square('I', 2);
+        SquareKT firstLetterSquare = new SquareKT('I', 2);
         WordDirection direction = WordDirection.HORIZONTAL;
 
 
@@ -58,7 +58,7 @@ public class ScrabbleTest {
     public void calculate2ndSamplePart2IntegrationTest() {
         String word = "Cabbage";
         Scrabble scrabble = new Scrabble();
-        Square firstLetterSquare = new Square('A', 4);
+        SquareKT firstLetterSquare = new SquareKT('A', 4);
         WordDirection direction = WordDirection.VERTICAL;
 
 
