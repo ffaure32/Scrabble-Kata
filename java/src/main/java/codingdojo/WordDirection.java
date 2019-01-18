@@ -4,7 +4,7 @@ public enum WordDirection {
     HORIZONTAL {
         @Override
         public Square move(Square previous) {
-            return previous.left();
+            return previous.right();
         }
     },
     VERTICAL {
