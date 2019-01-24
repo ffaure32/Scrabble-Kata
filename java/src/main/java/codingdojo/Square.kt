@@ -10,15 +10,16 @@ class Square(val letter: Char, val number: Int) {
         return Square(letter, number + 1)
     }
 
-    private fun move(direction: WordDirection): Square {
-        return direction.move(this)
+    private fun getDirectNeighboor(direction: WordDirection): Square {
+        return direction.next(this)
     }
 
     fun toCoordinates(): String {
-        return """$letter,$number"""
+        return "$letter,$number"
     }
 
-    fun getSquareForLetterIndex(nbMoves: Int, direction: WordDirection): Square {
-        return if (nbMoves == 0) this else move(direction).getSquareForLetterIndex(nbMoves - 1, direction)
+    fun getNeighboor(direction: WordDirection, distance: Int): Square {
+        if (distance == 0) return this
+        else return getDirectNeighboor(direction).getNeighboor(direction, distance - 1)
     }
 }

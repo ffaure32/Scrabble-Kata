@@ -19,7 +19,7 @@ public class ModifiersBuilder {
     public List<String> getModifiers() {
         List<Square> collect = IntStream
                 .range(0, wordLength)
-                .mapToObj(i -> firstLetterSquare.getSquareForLetterIndex(i, direction))
+                .mapToObj(i -> firstLetterSquare.getNeighboor(direction, i))
                 .collect(Collectors.toList());
 
         return collect.stream().map(Square::toCoordinates)

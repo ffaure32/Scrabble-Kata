@@ -36,7 +36,7 @@ internal class SquareTest {
     internal fun getSquareForLetterIndex_should_return_good_square() {
         val square = Square('A', 1)
 
-        val squareForLetterIndex = square.getSquareForLetterIndex(2, WordDirection.HORIZONTAL)
+        val squareForLetterIndex = square.getNeighboor(WordDirection.HORIZONTAL, 2)
         assertEquals('C', squareForLetterIndex.letter)
     }
 
@@ -44,7 +44,7 @@ internal class SquareTest {
     internal fun getSquareForLetterIndex_should_return_itself() {
         val square = Square('A', 1)
 
-        val squareForLetterIndex = square.getSquareForLetterIndex(0, WordDirection.HORIZONTAL)
+        val squareForLetterIndex = square.getNeighboor(WordDirection.HORIZONTAL, 0)
         assertEquals('A', squareForLetterIndex.letter)
     }
 }
